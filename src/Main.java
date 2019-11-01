@@ -5,7 +5,8 @@
  */
 
 import java.sql.Connection;
-import model.Conexao;
+import model.Conexao1;
+import model.Conexao2;
 import model.Login;
 
 
@@ -15,11 +16,13 @@ import model.Login;
  */
 public class Main {
 
-    public static Connection conexao;
+    public static Connection conexao1;
+    public static Connection conexao2;
 
     public static void main(String[] args) {
         
-        conexao = new Conexao().getConexao();
+        conexao1 = new Conexao1().getConexao();
+        conexao2 = new Conexao2().getConexao();
         new Login().buscar();
 //        new LoginFrm().setVisible(true);
         
